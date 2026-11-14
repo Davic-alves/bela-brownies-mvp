@@ -31,19 +31,6 @@ docs/        protótipos e documentação
 schema.sql   tabelas e função criar_pedido (rodar no Supabase)
 ```
 
-## Como executar
-1. Crie um projeto no [Supabase](https://supabase.com) e rode `schema.sql` no SQL Editor.
-2. Clone o repositório e crie o ambiente:
-   ```bash
-   python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-3. `cp .env.example .env` e preencha as chaves. Gere o hash da senha com:
-   ```bash
-   python -m app.security "sua-senha"
-   ```
-4. Rode: `uvicorn app.main:app --reload` e abra http://localhost:8000
-
 ## Segurança (resumo)
 Senhas com Argon2 · sessão HttpOnly · consultas parametrizadas · validação no
 servidor · limite de tentativas de login · segredos só em variáveis de ambiente ·
